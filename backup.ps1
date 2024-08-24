@@ -18,7 +18,9 @@ $backupItems = @(
     "$HomeFolder\.gitconfig",
     "Github",
     "dev",
-    "devtest"
+    "devtest",
+    "manifest",
+    "manifest_backup"
     # Add more items here as needed
 )
 
