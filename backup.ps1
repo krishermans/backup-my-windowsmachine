@@ -20,7 +20,8 @@ $backupItems = @(
     "dev",
     "devtest",
     "manifest",
-    "manifest_backup"
+    "manifest_backup",
+    "student"
     # Add more items here as needed
 )
 
