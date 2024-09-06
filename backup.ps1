@@ -9,19 +9,19 @@ param (
 
 # List of folders and files to backup
 $backupItems = @(
-    # "$HomeFolder\.ssh",
-    # "$HomeFolder\Pictures",
-    # "$HomeFolder\AppData\Roaming\Code\User",
-    # "$HomeFolder\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState",
-    # "$HomeFolder\Desktop",
-    # "$HomeFolder\Documents",
-    "$HomeFolder\.gitconfig"
-    # "Github",
-    # "dev",
-    # "devtest",
-    # "manifest",
-    # "manifest_backup",
-    # "student"
+    "$HomeFolder\.ssh",
+    "$HomeFolder\Pictures",
+    "$HomeFolder\AppData\Roaming\Code\User",
+    "$HomeFolder\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState",
+    "$HomeFolder\Desktop",
+    "$HomeFolder\Documents",
+    # "$HomeFolder\.gitconfig",
+    "Github",
+    "dev",
+    "devtest",
+    "manifest",
+    "manifest_backup",
+    "student"
     # Add more items here as needed
 )
 
