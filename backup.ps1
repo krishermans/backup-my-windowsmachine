@@ -9,19 +9,19 @@ param (
 
 # List of folders and files to backup
 $backupItems = @(
-    "$HomeFolder\.ssh",
-    "$HomeFolder\Pictures",
-    "$HomeFolder\AppData\Roaming\Code\User",
-    "$HomeFolder\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState",
-    "$HomeFolder\Desktop",
-    "$HomeFolder\Documents",
-    "$HomeFolder\.gitconfig",
-    "Github",
-    "dev",
-    "devtest",
-    "manifest",
-    "manifest_backup",
-    "student"
+    # "$HomeFolder\.ssh",
+    # "$HomeFolder\Pictures",
+    # "$HomeFolder\AppData\Roaming\Code\User",
+    # "$HomeFolder\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState",
+    # "$HomeFolder\Desktop",
+    # "$HomeFolder\Documents",
+    "$HomeFolder\.gitconfig"
+    # "Github",
+    # "dev",
+    # "devtest",
+    # "manifest",
+    # "manifest_backup",
+    # "student"
     # Add more items here as needed
 )
 
@@ -43,7 +43,13 @@ function Backup-Item {
     if ($Verbose) {
         Write-Host "Backing up $Source to $Destination"
     }
-
+    ## BUG: just one file like .gitconfig is not copied => look into this later...
+    #  if $source is a file, then $source is the file name and $destination is the folder
+    # if (Test-Path $Source -PathType Leaf) {
+    #     $Destination = Split-Path $Destination -Parent
+    #     # use robocopy to copy the file
+    #     $Source = "/COPY:DAT $Source"
+    # }
     Start-Process -FilePath "robocopy" -ArgumentList "$Source $Destination $robocopyOptions" -Wait -NoNewWindow
 }
 
