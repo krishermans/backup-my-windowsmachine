@@ -11,7 +11,7 @@ param (
 $backupItems = @(
     "$HomeFolder\.ssh",
     "$HomeFolder\Pictures",
-    "$HomeFolder\AppData\Local\Code",
+    "$HomeFolder\AppData\Roaming\Code\User",
     "$HomeFolder\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState",
     "$HomeFolder\Desktop",
     "$HomeFolder\Documents",
